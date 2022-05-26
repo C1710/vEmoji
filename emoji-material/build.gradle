@@ -25,10 +25,23 @@ kotlin {
   android("android") {
     publishLibraryVariants("release")
   }
-//  ios("ios")
+  ios("ios")
   jvm("jvm")
   jvmToolchain {
     languageVersion.set(JavaLanguageVersion.of(11))
+  }
+
+  cocoapods {
+    version = VERSION_NAME
+    summary = "emoji-material"
+    homepage = "https://github.com/vanniktech/Emoji"
+    name = "EmojiMaterial"
+
+//    framework {
+//      isStatic = true
+//      embedBitcode(BITCODE)
+//      export(project(":emoji"))
+//    }
   }
 
   sourceSets {
@@ -52,6 +65,12 @@ kotlin {
     androidUnitTest.dependencies {
       implementation libs.kotlin.test.junit
       implementation libs.robolectric
+    }
+
+    iosMain.dependencies {
+    }
+
+    iosTest.dependencies {
     }
 
     jvmMain.dependencies {

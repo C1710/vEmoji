@@ -1,24 +1,24 @@
 Pod::Spec.new do |spec|
-    spec.name                     = 'emoji_google_compat'
+    spec.name                     = 'EmojiIos'
     spec.version                  = '0.18.0-SNAPSHOT'
-    spec.homepage                 = ''
+    spec.homepage                 = 'https://github.com/vanniktech/Emoji'
     spec.source                   = { :http=> ''}
     spec.authors                  = ''
     spec.license                  = ''
-    spec.summary                  = ''
-    spec.vendored_frameworks      = 'build/cocoapods/framework/emoji_google_compat.framework'
+    spec.summary                  = 'emoji-ios'
+    spec.vendored_frameworks      = 'build/cocoapods/framework/emoji_ios.framework'
     spec.libraries                = 'c++'
                 
                 
                 
     spec.pod_target_xcconfig = {
-        'KOTLIN_PROJECT_PATH' => ':emoji-google-compat',
-        'PRODUCT_MODULE_NAME' => 'emoji_google_compat',
+        'KOTLIN_PROJECT_PATH' => ':emoji-ios',
+        'PRODUCT_MODULE_NAME' => 'emoji_ios',
     }
                 
     spec.script_phases = [
         {
-            :name => 'Build emoji_google_compat',
+            :name => 'Build EmojiIos',
             :execution_position => :before_compile,
             :shell_path => '/bin/sh',
             :script => <<-SCRIPT
