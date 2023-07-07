@@ -23,8 +23,8 @@ import android.graphics.PixelFormat
 import android.graphics.drawable.Drawable
 import android.text.Spanned
 import android.text.TextPaint
-import androidx.emoji.text.EmojiCompat
-import androidx.emoji.text.EmojiSpan
+import androidx.emoji2.text.EmojiCompat
+import androidx.emoji2.text.EmojiSpan
 import kotlin.math.roundToInt
 
 /**
@@ -43,7 +43,8 @@ internal class GoogleCompatEmojiDrawable(
   }
 
   private fun process() {
-    emojiCharSequence = EmojiCompat.get().process(emojiCharSequence)
+    // process() returns null iff the CharSequence is null, which is guaranteed to not be the case
+    emojiCharSequence = EmojiCompat.get().process(emojiCharSequence)!!
     if (emojiCharSequence is Spanned) {
       val spans = (emojiCharSequence as Spanned).getSpans(0, emojiCharSequence.length, EmojiSpan::class.java)
 

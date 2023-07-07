@@ -45,7 +45,7 @@ kotlin {
     }
 
     androidMain.dependencies {
-      api libs.androidx.emoji.appcompat
+      api libs.androidx.emoji2
     }
 
     androidUnitTest.dependencies {

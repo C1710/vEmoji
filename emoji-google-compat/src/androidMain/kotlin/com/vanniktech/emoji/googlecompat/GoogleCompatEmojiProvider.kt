@@ -19,7 +19,7 @@ package com.vanniktech.emoji.googlecompat
 import android.content.Context
 import android.graphics.drawable.Drawable
 import android.text.Spannable
-import androidx.emoji.text.EmojiCompat
+import androidx.emoji2.text.EmojiCompat
 import com.vanniktech.emoji.Emoji
 import com.vanniktech.emoji.EmojiAndroidProvider
 import com.vanniktech.emoji.EmojiCategory
